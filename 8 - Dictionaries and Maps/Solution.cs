@@ -18,13 +18,17 @@ class Solution
 
         for (var i = 0; i < n; i++)
         {
-            var name = Console.ReadLine();
+            var name = "";
+            while ((name = Console.ReadLine()) != null)
+            {
             if (phoneBook.ContainsKey(name))
             {
                 var phone = phoneBook[name];
                 Console.WriteLine($"{name}={phone}");
             }
             else Console.WriteLine("Not found");
+            }
         }
     }
 }
+
